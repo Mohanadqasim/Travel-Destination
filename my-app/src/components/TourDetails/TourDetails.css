@@ -1,0 +1,23 @@
+.a {
+    background-color: rgb(147, 249, 249);
+    display: flex;
+    justify-content:center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #00b0fcd1;
+}
+
+img.card-img-top {
+    align-self: center;
+}
+
+.card-Img{
+    align-self: center;
+}
