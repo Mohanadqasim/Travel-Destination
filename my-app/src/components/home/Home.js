@@ -3,12 +3,12 @@ import Footer from "../footer/Footer";
 import Tours from "../tours/Tours";
 import './Home.css'
 
-function Home () {
+function Home() {
     return (
         <>
-        <Header className="header" />
-        <Tours className="cards" />
-        <Footer />
+            <Header className="header" />
+            <Tours className="cards" />
+            <Footer />
         </>
     )
 }

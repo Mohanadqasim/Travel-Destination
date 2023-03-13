@@ -1,19 +1,23 @@
-import { useState } from 'react';
 import React from 'react';
 import './Tour.css'
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+
+
 
 function Tour(props) {
-    const { tour } = props;
-    const [showInfo, setShowInfo] = useState(false);
 
+    const { tour } = props;
+
+    
     return (
         <div className='card'>
-            <h2 className='title'>{tour.name}</h2>
-            <img src={tour.image} alt={tour.city} className='image' />
-            <p className='info'>
-                {showInfo ? tour.info : `${tour.info.substring(0, 100)}...`}
-                <button onClick={() => setShowInfo(!showInfo)} className="see-more">{showInfo ? 'See less' : 'See more'}</button>
-            </p>
+            <h2 className='title'>{props.tour.name}</h2>
+            <img src={props.tour.image} alt={tour.city} className='image' />
+            <Link to={`/city/${props.tour.id}`}>  {/* the "id" was taken from the dataBase  */}
+                <Button variant="primary">more information</Button>
+
+            </Link>
         </div>
     );
 }
